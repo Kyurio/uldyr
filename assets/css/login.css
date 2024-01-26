@@ -1,0 +1,59 @@
+@import url('https://db.onlinewebfonts.com/c/b4ccc98add6cc60de17dbb589dca2164?family=Juventus+Fans+Bold');
+
+body {
+    font-family: "Juventus Fans bold";
+}
+
+.card {
+    height: auto;
+    max-height: 370px;
+}
+
+.forms-inputs {
+    position: relative;
+}
+
+.forms-inputs span {
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.forms-inputs input {
+    height: 50px;
+    width: 100%;
+    border: 2px solid #eee;
+}
+
+.forms-inputs input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #000;
+}
+
+.success-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.bxs-badge-check {
+    font-size: 90px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+    .card {
+        max-height: none; /* Restablecer la altura máxima en pantallas pequeñas */
+    }
+
+    .forms-inputs span {
+        font-size: 13px; /* Reducir el tamaño del texto flotante en pantallas más pequeñas */
+    }
+
+    .forms-inputs input {
+        height: 40px; /* Reducir la altura del input en pantallas más pequeñas */
+    }
+}

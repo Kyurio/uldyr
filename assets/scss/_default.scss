@@ -1,0 +1,51 @@
+body {
+
+    font-family: $font-family !important;
+    font-weight: 400 !important;
+    background-color: $gris !important;
+    
+
+}
+  
+
+
+a {
+
+    font-weight: 400 !important;
+    text-decoration: none !important;
+
+}
+
+.admin {
+    min-height: 100vh !important;
+}
+
+.animate__animated .animate__fadeIn {
+    --animate-duration: 5s;
+}
+
+footer {
+    background-color: $negro !important;
+    color: white;
+
+    li {
+        color: white;
+    }
+}
+
+
+main {
+    min-height: 100vh !important;
+}
+
+
+
+
+.banner-title {
+    font-size: 12rem;
+    font-weight: 800;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    color: var(--dark-color);
+}

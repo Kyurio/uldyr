@@ -1,0 +1,20 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Eliminar la extensión de los archivos PHP
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^([^\.]+)$ $1.php [NC,L]
+    
+  # Redirigir a las páginas de error
+  RewriteCond %{REQUEST_URI} ^/error/404 [OR]
+  RewriteCond %{REQUEST_URI} ^/error/500
+  RewriteRule ^(.*)$ error/%{REQUEST_URI}.php [L]
+  
+  # Redirigir todas las solicitudes a index.php
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>

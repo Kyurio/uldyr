@@ -1,0 +1,143 @@
+.card {
+
+  border: none; /* Quita el borde */
+  box-shadow: none; /* Quita la sombra */
+  border-radius:  $border-radius;
+
+}
+
+.card-category {
+  background-color: $gris !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 15rem; // Altura deseada
+  padding: 2rem auto;
+  border-radius: $border-radius;
+  background-color: $amarillo !important;
+
+  .card-body-category {
+    display: flex; // Utiliza flexbox para controlar el diseño interno
+    flex-direction: row-reverse; // Coloca los elementos en fila (derecha a izquierda)
+    justify-content: space-between; // Alinea el contenido a la izquierda y la imagen a la derecha
+    align-items: center; // Centra verticalmente el contenido
+    text-align: left; // Alinea el texto a la izquierda
+    height: 100%; // Llena toda la altura de la tarjeta
+  }
+
+  .content-left {
+    margin-right: 10px; // Añade espacio entre el texto y la imagen
+  }
+
+  h6 {
+    font-size: 1.2rem !important;
+    font-weight: 900 !important;
+    margin-top: 8rem !important;
+  }
+
+  strong {
+    color: $amarillo !important;
+    font-size: 0.8rem !important;
+  }
+
+}
+
+
+.card-product {
+  position: relative;
+  width: 320px;
+  height: 360px;
+  background: #191919;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #ffce00;
+    transform: skewY(345deg);
+    transition: 0.5s;
+  }
+
+  &:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+  }
+
+  &::after {
+    content: "CORSAIR";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 6em;
+    color: rgba(0, 0, 0, 0.1);
+  }
+
+  .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+
+    h3 {
+      font-size: 18px;
+      color: white;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .price {
+      font-size: 24px;
+      color: white;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .buy {
+      position: relative;
+      top: 100px;
+      opacity: 0;
+      padding: 10px 30px;
+      margin-top: 15px;
+      color: #000000;
+      text-decoration: none;
+      background: #ffce00;
+      border-radius: $border-radius;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.5s;
+    }
+  }
+
+  &:hover .contentBox .buy {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.mouse {
+  max-width: 100%;
+  height: auto;
+}

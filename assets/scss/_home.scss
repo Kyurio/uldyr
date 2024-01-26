@@ -1,0 +1,21 @@
+.home {
+    min-height: 80vh !important;
+
+    h1 {
+        font-size: 70px;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            transform: rotate(0deg); /* Vuelve a la posición vertical en pantallas pequeñas */
+        }
+    }
+}
+
+
+.titles {
+
+    font-size: 5rem;
+    text-align: center;
+
+}
