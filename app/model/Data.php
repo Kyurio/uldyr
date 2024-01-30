@@ -65,6 +65,18 @@ class Data
 
         return count($matchingKeywords);
     }
+
+    public function create($data)
+    {
+
+        $columns = implode(',', array_keys($data));
+        $values = implode(',', array_fill(0, count($data), '?'));
+
+        $stmt = $this->db->prepare("INSERT INTO " . $this->table . "(" . $columns . ") VALUES (" . $values . ")");
+        $stmt->execute(array_values($data));
+
+        return $this->db->lastInsertId();
+    }
 }
 
 ?>

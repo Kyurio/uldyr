@@ -7,6 +7,9 @@
     <div id="app">
       <div class="container">
 
+
+        <?php include 'components/section/admin.php' ?>
+
         <section>
           <div class="asistente-virtual">
             <div class="chat-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
